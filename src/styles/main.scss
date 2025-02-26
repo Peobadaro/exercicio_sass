@@ -1,4 +1,5 @@
-@use 'variables';
+@use 'variables' as *;
+@use 'mixins';
 @use 'header';
 @use 'products';
 
@@ -6,24 +7,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: variables.$main-font;
+    font-family: $main-font;
 }
 
 .container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 variables.$container-padding;
+    @include mixins.container;
 }
 
-@media screen and (max-width: variables.$tablet) {
+@media screen and (max-width: $tablet) {
     .products {
         grid-template-columns: repeat(2, 48.5%);
         column-gap: 3%;
     }
 }
 
-@media screen and (max-width: variables.$desktop) {
+@media screen and (max-width: $desktop) {
     .container {
         max-width: 80%;
     }

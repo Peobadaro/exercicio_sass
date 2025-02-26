@@ -1,0 +1,27 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+@mixin button {
+    display: block;
+    background-color: $button-color;
+    color: $text-color;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: $border-radius;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $button-hover-color;
+    }
+} 

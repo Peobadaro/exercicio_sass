@@ -1,7 +1,9 @@
-@use 'variables';
+@use 'variables' as *;
+@use 'mixins' as *;
 
 header {
     position: relative;
+    background-color: rgba($secondary-color, 0.8);
     
     .carousel {
         width: 100%;
@@ -31,38 +33,25 @@ header {
             bottom: 25px;
             
             li button:before {
-                color: variables.$text-color;
+                color: $text-color;
             }
         }
     }
 
     .container {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2;
-        background-color: rgba(variables.$secondary-color, 0.8);
-        width: 100%;
-        padding: 16px 0;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex-center;
+        padding: $header-padding 0;
     }
 
-    background-color: variables.$secondary-color;
-    padding: 16px 0;
-    
     .menu {
         display: flex;
         
         li {
             font-weight: bold;
-            margin-left: 24px;
+            margin-left: $item-spacing * 1.5;
 
             a {
-                color: variables.$text-color;
+                color: $text-color;
                 text-decoration: none;
             }
         }

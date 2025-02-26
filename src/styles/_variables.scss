@@ -3,15 +3,27 @@ $primary-color: #f5f6fa;
 $secondary-color: #182C61;
 $text-color: #fff;
 $button-color: #44bd32;
+$button-hover-color: darken($button-color, 10%);
+
+// Typography
+$main-font: 'Roboto', sans-serif;
+$font-size-base: 16px;
+$font-size-title: 24px;
 
 // Spacing
 $container-padding: 15px;
 $section-spacing: 80px;
 $item-spacing: 16px;
+$header-padding: 16px;
+
+// Grid
+$container-width: 1024px;
+$grid-columns: 3;
+$grid-gap: 1%;
 
 // Breakpoints
 $tablet: 768px;
 $desktop: 1024px;
 
-// Font
-$main-font: 'Roboto', sans-serif; 
+// Border
+$border-radius: 8px; 
