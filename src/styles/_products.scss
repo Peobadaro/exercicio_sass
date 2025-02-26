@@ -1,0 +1,34 @@
+@use 'variables';
+
+section {
+    padding: variables.$section-spacing 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    list-style-type: none;
+
+    .product-item {
+        img {
+            max-width: 100%;
+        }
+
+        .product-button {
+            display: block;
+            background-color: variables.$button-color;
+            color: variables.$text-color;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin-top: 8px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: darken(variables.$button-color, 10%);
+            }
+        }
+    }
+} 
