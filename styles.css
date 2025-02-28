@@ -1,91 +1,19 @@
-$primary-color: #182C61;
-$secondary-color: #44bd32;
-$font-stack: 'Roboto', sans-serif;
+/* Error: Undefined variable.
+ *    ,
+ * 17 |     gap: $grid-gap;
+ *    |          ^^^^^^^^^
+ *    '
+ *   src/styles/_mixins.scss 17:10   grid()
+ *   src/styles/_products.scss 14:5  @use
+ *   src/styles/main.scss 4:1        root stylesheet */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $font-stack;
-}
-
-body {
-    background-color: #f5f6fa;
-}
-
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-header {
-    background-color: $primary-color;
-    position: sticky;
-    top: 0;
-    left: 0;
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 0;
-    }
-}
-
-.menu {
-    display: flex;
-    li {
-        font-weight: bold;
-        margin-left: 24px;
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
-    }
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1%;
-    margin-top: 40px;
-    
-    .product-item {
-        text-align: center;
-        img {
-            width: 100%;
-            border-radius: 16px;
-        }
-        .product-button {
-            display: block;
-            background-color: $secondary-color;
-            color: #fff;
-            text-align: center;
-            padding: 8px 0;
-            border-radius: 8px;
-            margin-top: 8px;
-            text-decoration: none;
-            &:hover {
-                background-color: lighten($secondary-color, 10%);
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1023px) {
-    .container {
-        max-width: 80%;
-    }
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .products {
-        display: block;
-        .product-item {
-            margin-bottom: 32px;
-        }
-    }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 17 \2502      gap: $grid-gap;\a    \2502           ^^^^^^^^^\a    \2575 \a   src/styles/_mixins.scss 17:10   grid()\a   src/styles/_products.scss 14:5  @use\a   src/styles/main.scss 4:1        root stylesheet";
 }

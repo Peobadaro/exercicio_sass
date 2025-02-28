@@ -1,0 +1,12 @@
+{
+  "name": "exercicio_sass",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "sass": "sass src/styles/main.scss:styles.css --watch",
+    "sass:build": "sass src/styles/main.scss:styles.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+} 

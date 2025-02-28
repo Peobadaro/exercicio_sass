@@ -1,0 +1,18 @@
+@mixin container {
+    max-width: $container-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin grid($columns) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $grid-gap;
+} 

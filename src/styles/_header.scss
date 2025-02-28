@@ -1,0 +1,32 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+header {
+    background-color: $secondary-color;
+    padding: 16px 0;
+    
+    .container {
+        @include flex-center;
+    }
+
+    .branding {
+        h1 {
+            color: $text-color;
+            font-size: $font-size-title;
+        }
+    }
+
+    .menu {
+        display: flex;
+        gap: 24px;
+        
+        li {
+            font-weight: bold;
+
+            a {
+                color: $text-color;
+                text-decoration: none;
+            }
+        }
+    }
+} 
